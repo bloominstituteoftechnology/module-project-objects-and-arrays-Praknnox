@@ -89,8 +89,9 @@
     // 🧠 Examples of usage:
     // pushElement([], 1) // should return [1]
     // pushElement(['a', 'b'], 'c') // should return ['a', 'b', 'c']
-    function pushElement() {
-      
+    function pushElement(arr,any) {
+      arr.push(any)
+      return arr
     }
 
     // 👉 CHALLENGE 7
@@ -105,8 +106,16 @@
     // 🧠 At each iteration of the loop, if the current character is not "x", then add it to the end of the result array.
     // 🧠 You can merge the result array back into a string by using join. Example: ["f", "o", "o"].join("") yields "foo"
     // 🧠 Do not forget to return your rejoined string!
-    function stripX() {
-
+    function stripX(string) {
+      let result=[]
+      let splitter=string.split("")
+      for(let idx in splitter){
+        let val=splitter[idx]
+        if(val!=="x"){
+          result[result.length]=val
+        }
+      }
+      return result.join("")
     }
 
     // 👉 CHALLENGE 8
@@ -118,8 +127,16 @@
     // ❗ Important Notes:
     // 🧠 Try to solve this problem without looking at how you solved the previous one.
     // 🧠 If you need to look, do not copy & paste code. Take a peek and then work from memory!
-    function stripChar() {
-
+    function stripChar(string,char) {
+      let yseult=[]
+      let banana=string.split("")
+      for(let idx in banana){
+        let erie=banana[idx]
+        if(erie!==char){
+          yseult[yseult.length]=erie
+        }
+      }
+      return yseult.join("")
     }
 
     // 👉 CHALLENGE 9
@@ -131,8 +148,14 @@
     // getProps({ lastName: "Smith", age: 35 }) // should return ["lastName"]
     // getProps({ firstName: "Jane", married: false }) // should return ["firstName"]
     // getProps({ name: "Bamby", favFood: "flowers" }) // should return ["name", "favFood"]
-    function getProps() {
-
+    function getProps(object) {
+      let prop=[]
+      for(let key in object){
+        if(key!=="age"&&key!=="married"){
+          prop[prop.length]=key
+        }
+      }
+      return prop
     }
 
     // 🧪 TESTS, do not work below this line
