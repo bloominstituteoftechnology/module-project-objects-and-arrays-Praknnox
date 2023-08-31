@@ -23,15 +23,17 @@
     // 🧠 Example of usage:
     // buildPeter() // should return { firstName: "Peter", lastName: "Pan", age: 12 }
     function buildPeter() {
-
+      const heypeter={firstName:"Peter",lastName:"Pan",age:12}
+      return heypeter
     }
+
 
     // 👉 CHALLENGE 2
     // 🧠 The function buildUser takes three arguments and uses them to build an object and return it.
     // 🧠 Example of usage:
     // buildUser("John", "Smith", 30) // should return { firstName: "John", lastName: "Smith", age: 30 }
     function buildUser(firstName, lastName, age) {
-
+      return {firstName,lastName,age}
     }
 
     // 👉 CHALLENGE 3
@@ -42,8 +44,13 @@
     // 🧠 Examples of usage:
     // deletePrice({ item: "Tesla Model 3", price: 40000 }) // should return { item: "Tesla Model 3" }
     // deletePrice({ item: "Kobo Libra 2" }) // should return { item: "Kobo Libra 2", priceless: true }
-    function deletePrice() {
-
+    function deletePrice(object) {
+      if(object.price!==undefined){
+        delete object.price
+      }else{
+        object.priceless=true
+      }
+      return object
     }
 
     // 👉 CHALLENGE 4
@@ -53,7 +60,12 @@
     // evenList(['a']) // should return false
     // evenList(['a', 'b']) // should return true
     function evenList(arr) {
-
+      if(arr.length%2!==0){
+        return false
+      }else
+      if(arr.length%2===0){
+        return true
+      }
     }
 
     // 👉 CHALLENGE 5
@@ -62,8 +74,13 @@
     // 🧠 Examples of usage:
     // firstOrLast(['a', 'b'], true) // should return 'a'
     // firstOrLast(['a', 'b'], false) // should return 'b'
-    function firstOrLast() {
-
+    function firstOrLast(arr,Boolean) {
+      if(Boolean){
+        return arr[0]
+      }else
+      if(!Boolean){
+        return arr.at(-1)
+      }
     }
 
     // 👉 CHALLENGE 6
@@ -73,7 +90,7 @@
     // pushElement([], 1) // should return [1]
     // pushElement(['a', 'b'], 'c') // should return ['a', 'b', 'c']
     function pushElement() {
-
+      
     }
 
     // 👉 CHALLENGE 7
